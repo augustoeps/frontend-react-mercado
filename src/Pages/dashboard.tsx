@@ -9,7 +9,7 @@ const Dashboard = () => {
         <div className="h-screen flex flex-col">
          <Header boton={"Crear compra"} boton2={"Ver Compras"}/>
 
-            <div className={"flex items-start "}>
+            <div className={"flex items-start"}>
 
                 <aside>
                     <ItemList/>
