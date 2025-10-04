@@ -1,5 +1,6 @@
 [
   { "name": "Dashboard", "iconName": "FaTachometerAlt", "path": "/" },
   { "name": "Productos", "iconName": "FaBoxOpen", "path": "/products" },
-  { "name": "Ajustes", "iconName": "FaCog", "path": "/ajust" }
+  { "name": "Ajustes", "iconName": "FaCog", "path": "/ajust" },
+  { "name": "Carrito", "iconName": "FaShoppingCart", "path": "/Carrito" }
 ]

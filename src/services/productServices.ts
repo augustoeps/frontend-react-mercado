@@ -11,7 +11,7 @@ export const fetchProducts = async(): Promise<Product[]> =>{
             throw new Error("Error al obtener productos")
         }
         const data : Product[] = await response.json();
-
+        localStorage.setItem("last_activity", new Date().toISOString()); // actualizar
         return data
 
     }catch(error){
@@ -46,7 +46,7 @@ export const createProduct = async (data: ProductInput) => {
             },
             body: JSON.stringify(data),
         });
-
+        localStorage.setItem("last_activity", new Date().toISOString()); // actualizar
         if (!response.ok) {
             throw new Error("Error al crear producto");
         }
@@ -70,7 +70,7 @@ export const updateProductStock = async (id: number, newStock: number) => {
             },
             body: JSON.stringify({ stock: newStock }),
         });
-
+        localStorage.setItem("last_activity", new Date().toISOString()); // actualizar
         if (!response.ok) {
             throw new Error("Error al actualizar stock");
         }
@@ -82,6 +82,7 @@ export const updateProductStock = async (id: number, newStock: number) => {
         console.error("Error en updateProductStock:", error);
         throw error;
     }
+
 };
 
 export const deleteProduct = async (id: number) => {
@@ -92,7 +93,7 @@ export const deleteProduct = async (id: number) => {
                 "Content-Type": "application/json",
             },
         });
-
+        localStorage.setItem("last_activity", new Date().toISOString()); // actualizar
         if (!response.ok) {
             throw new Error("Error al eliminar el producto");
         }
